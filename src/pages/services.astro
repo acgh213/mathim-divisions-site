@@ -1,0 +1,101 @@
+---
+// services.astro — full services page with tiers
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GlassCard from '../components/GlassCard.astro';
+---
+
+<BaseLayout
+  title="Services"
+  description="IT audits, documentation, and roadmaps for small businesses. Clear deliverables, honest pricing."
+>
+  <section class="section" style="padding-top: 160px;">
+    <p class="section-label">Services</p>
+    <h1 class="section-heading">What we deliver</h1>
+    <p class="section-subtitle">
+      Every engagement produces a document you can use — not a sales deck, not a proposal.
+      A clear, actionable deliverable written for the people who run your business.
+    </p>
+  </section>
+
+  <section class="section" id="audits">
+    <div class="section-divider" style="margin-bottom: 4rem;"></div>
+    <p class="section-label">Service</p>
+    <h2>IT Clarity Audits</h2>
+    <p>
+      A full-environment audit covering Microsoft 365, devices, security posture, backup
+      strategy, and network configuration. We inventory what exists, flag what's missing,
+      and tell you what matters most.
+    </p>
+
+    <div class="services-grid" style="margin-top: 2rem;">
+      <GlassCard>
+        <h3 class="service-card-heading">Light Audit</h3>
+        <p class="service-card-text">
+          A focused review of one area — M365 tenant health, device inventory, or backup
+          verification. One report with findings and recommendations.
+        </p>
+        <p style="margin-top: 1rem; font-weight: 500;">Starting at $300</p>
+      </GlassCard>
+
+      <GlassCard>
+        <h3 class="service-card-heading">Full Audit</h3>
+        <p class="service-card-text">
+          Complete environment scan: M365, devices, security, backups, network. Prioritized
+          findings, immediate risks flagged, remediation roadmap.
+        </p>
+        <p style="margin-top: 1rem; font-weight: 500;">Starting at $1,200</p>
+      </GlassCard>
+
+      <GlassCard>
+        <h3 class="service-card-heading">Compliance Readiness</h3>
+        <p class="service-card-text">
+          Audit plus compliance gap analysis against your framework — HIPAA, CMMC, or
+          general security best practices. Documentation ready for review.
+        </p>
+        <p style="margin-top: 1rem; font-weight: 500;">Starting at $2,500</p>
+      </GlassCard>
+    </div>
+  </section>
+
+  <section class="section" id="documentation">
+    <div class="section-divider" style="margin-bottom: 4rem;"></div>
+    <p class="section-label">Service</p>
+    <h2>Documentation &amp; SOPs</h2>
+    <p>
+      Clear, maintainable documentation written for the people who actually need it.
+      Standard operating procedures, onboarding and offboarding processes, acceptable
+      use policies, and disaster recovery plans — all in plain English, not IT-speak.
+    </p>
+    <p style="margin-top: 1rem;">
+      <strong>Deliverables are yours.</strong> You get the editable documents, not a
+      locked portal. Starting at <strong>$300</strong>.
+    </p>
+  </section>
+
+  <section class="section" id="roadmaps">
+    <div class="section-divider" style="margin-bottom: 4rem;"></div>
+    <p class="section-label">Service</p>
+    <h2>Roadmaps &amp; Strategy</h2>
+    <p>
+      A prioritized plan for your IT environment. Quick wins you can implement this week,
+      strategic improvements for this quarter, and long-term investments with cost estimates.
+    </p>
+    <p>
+      Roadmaps are built on evidence — not vendor recommendations. We tell you what you
+      need, what it costs, and what happens if you wait. Starting at <strong>$500</strong>.
+    </p>
+  </section>
+
+  <section class="section contact-section">
+    <div class="section-divider" style="margin-bottom: 4rem;"></div>
+    <p class="section-label">Next Step</p>
+    <h2>Let's talk about what you need</h2>
+    <p style="margin-bottom: 2rem;">
+      Every engagement starts with a free conversation. No pitch, no pressure —
+      just figuring out if we can help.
+    </p>
+    <p>
+      <a href="mailto:cassie@mathimdivisions.com" class="contact-email">cassie@mathimdivisions.com</a>
+    </p>
+  </section>
+</BaseLayout>

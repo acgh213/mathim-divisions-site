@@ -1,0 +1,35 @@
+---
+// ServicesOverview.astro — three glass cards for the home page
+import GlassCard from './GlassCard.astro';
+---
+<section class="section">
+  <p class="section-label">What We Do</p>
+  <h2 class="section-heading">Three ways to clarity</h2>
+  <p class="section-subtitle">Every engagement starts with understanding what's actually there.</p>
+
+  <div class="services-grid">
+    <GlassCard>
+      <h3 class="service-card-heading">IT Clarity Audits</h3>
+      <p class="service-card-text">
+        Full-environment audits. M365, devices, security, backups. One report, one plan.
+      </p>
+      <a href="/services#audits" class="service-card-link">Learn more &rarr;</a>
+    </GlassCard>
+
+    <GlassCard>
+      <h3 class="service-card-heading">Documentation &amp; SOPs</h3>
+      <p class="service-card-text">
+        Onboarding, offboarding, acceptable use. The processes you need, in clear English.
+      </p>
+      <a href="/services#documentation" class="service-card-link">Learn more &rarr;</a>
+    </GlassCard>
+
+    <GlassCard>
+      <h3 class="service-card-heading">Roadmaps &amp; Strategy</h3>
+      <p class="service-card-text">
+        Priority roadmaps with costs. Quick wins today, strategy this quarter.
+      </p>
+      <a href="/services#roadmaps" class="service-card-link">Learn more &rarr;</a>
+    </GlassCard>
+  </div>
+</section>

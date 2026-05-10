@@ -1,0 +1,18 @@
+---
+// blog.astro — redirect/embed for the Vesper blog
+// For now, links out. Could embed recent posts via RSS later.
+const blogUrl = 'https://acgh213.github.io/vesper-blog/';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content={`0;url=${blogUrl}`} />
+    <title>Blog — Mathim Divisions</title>
+    <link rel="canonical" href={blogUrl} />
+  </head>
+  <body>
+    <p>Redirecting to <a href={blogUrl}>the Vesper blog</a>...</p>
+  </body>
+</html>

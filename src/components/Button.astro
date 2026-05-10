@@ -1,0 +1,13 @@
+---
+// Button.astro — primary and secondary button variants
+export interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary';
+}
+
+const { href, variant = 'primary' } = Astro.props;
+const variantClass = variant === 'secondary' ? 'btn-secondary' : 'btn-primary';
+---
+<a href={href} class={`btn ${variantClass}`}>
+  <slot />
+</a>
