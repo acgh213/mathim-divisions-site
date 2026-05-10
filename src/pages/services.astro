@@ -1,30 +1,30 @@
 ---
-// services.astro — full services page with tiers
+// services.astro — what we do page, multiple lanes
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GlassCard from '../components/GlassCard.astro';
 ---
 
 <BaseLayout
-  title="Services"
-  description="IT audits, documentation, and roadmaps for small businesses. Clear deliverables, honest pricing."
+  title="What We Do"
+  description="IT clarity, writing, tools, and consulting. Mathim Divisions is a practice with multiple lanes — here's what's available now."
 >
   <section class="section" style="padding-top: 160px;">
-    <p class="section-label">Services</p>
-    <h1 class="section-heading">What we deliver</h1>
+    <p class="section-label">What We Do</p>
+    <h1 class="section-heading">Multiple lanes, one practice</h1>
     <p class="section-subtitle">
-      Every engagement produces a document you can use — not a sales deck, not a proposal.
-      A clear, actionable deliverable written for the people who run your business.
+      Mathim Divisions is a personal brand that can hold many kinds of work. These are the active lanes right now. More will open.
     </p>
   </section>
 
-  <section class="section" id="audits">
+  <!-- IT Clarity -->
+  <section class="section" id="it">
     <div class="section-divider" style="margin-bottom: 4rem;"></div>
-    <p class="section-label">Service</p>
-    <h2>IT Clarity Audits</h2>
+    <p class="section-label">IT Clarity</p>
+    <h2>Audits, documentation &amp; roadmaps</h2>
     <p>
-      A full-environment audit covering Microsoft 365, devices, security posture, backup
-      strategy, and network configuration. We inventory what exists, flag what's missing,
-      and tell you what matters most.
+      Small businesses that don't have dedicated IT staff still need to know what they have,
+      what's broken, and what to do next. This is the core of the practice — clear, human-readable
+      IT work delivered as documents you can actually use.
     </p>
 
     <div class="services-grid" style="margin-top: 2rem;">
@@ -55,44 +55,52 @@ import GlassCard from '../components/GlassCard.astro';
         <p style="margin-top: 1rem; font-weight: 500;">Starting at $2,500</p>
       </GlassCard>
     </div>
+
+    <p style="margin-top: 2rem;">
+      Also available: <strong>documentation &amp; SOPs</strong> (starting at $300) and
+      <strong>roadmaps &amp; strategy</strong> (starting at $500). Every engagement produces
+      editable documents you keep — not a locked portal.
+    </p>
   </section>
 
-  <section class="section" id="documentation">
+  <!-- Writing -->
+  <section class="section" id="writing">
     <div class="section-divider" style="margin-bottom: 4rem;"></div>
-    <p class="section-label">Service</p>
-    <h2>Documentation &amp; SOPs</h2>
+    <p class="section-label">Writing</p>
+    <h2>The Vesper Blog</h2>
     <p>
-      Clear, maintainable documentation written for the people who actually need it.
-      Standard operating procedures, onboarding and offboarding processes, acceptable
-      use policies, and disaster recovery plans — all in plain English, not IT-speak.
+      Essays on technology, continuity, and practice — published regularly. Case studies from
+      real engagements, thinking-out-loud about how IT work actually gets done, and explorations
+      of what it means to build a practice around clarity.
     </p>
     <p style="margin-top: 1rem;">
-      <strong>Deliverables are yours.</strong> You get the editable documents, not a
-      locked portal. Starting at <strong>$300</strong>.
+      <a href="https://acgh213.github.io/vesper-blog/">Visit the blog &rarr;</a>
     </p>
   </section>
 
-  <section class="section" id="roadmaps">
+  <!-- Tools & Templates -->
+  <section class="section" id="tools">
     <div class="section-divider" style="margin-bottom: 4rem;"></div>
-    <p class="section-label">Service</p>
-    <h2>Roadmaps &amp; Strategy</h2>
+    <p class="section-label">Tools &amp; Templates</p>
+    <h2>Digital products on Gumroad</h2>
     <p>
-      A prioritized plan for your IT environment. Quick wins you can implement this week,
-      strategic improvements for this quarter, and long-term investments with cost estimates.
+      Ready-to-use IT documentation kits, SOP bundles, audit checklists, and policy templates —
+      built from real engagements and available to download and adapt.
     </p>
-    <p>
-      Roadmaps are built on evidence — not vendor recommendations. We tell you what you
-      need, what it costs, and what happens if you wait. Starting at <strong>$500</strong>.
+    <p style="margin-top: 1rem;">
+      The first product — the <strong>Small Business IT Audit Kit</strong> — launches soon.
+      Check the site or <a href="/contact">reach out</a> to be notified.
     </p>
   </section>
 
+  <!-- Contact -->
   <section class="section contact-section">
     <div class="section-divider" style="margin-bottom: 4rem;"></div>
     <p class="section-label">Next Step</p>
-    <h2>Let's talk about what you need</h2>
+    <h2>Let's talk</h2>
     <p style="margin-bottom: 2rem;">
       Every engagement starts with a free conversation. No pitch, no pressure —
-      just figuring out if we can help.
+      just figuring out if we can help, in whatever lane makes sense.
     </p>
     <p>
       <a href="mailto:cassie@mathimdivisions.com" class="contact-email">cassie@mathimdivisions.com</a>
