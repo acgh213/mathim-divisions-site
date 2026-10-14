@@ -1,0 +1,30 @@
+name: Stage static site for Worker publishing
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/stage-static.yml']
+permissions:
+  contents: write
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Publish compiled files to dedicated staging branch
+        run: |
+          set -e
+          cp -a dist /tmp/mathim-dist
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch --orphan compiled-worker-assets
+          git rm -rf . >/dev/null
+          cp -a /tmp/mathim-dist/. .
+          git add -A
+          git commit -m "Compiled static output for Cloudflare Worker release"
+          git push --force origin HEAD:refs/heads/compiled-worker-assets
