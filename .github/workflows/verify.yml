@@ -22,25 +22,24 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
-      - name: Screenshot preview
+      - name: Screenshot and route verification
         run: |
           python3 -m http.server 4173 --directory dist > /tmp/mathim-http.log 2>&1 &
           sleep 2
-          google-chrome --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --screenshot=/tmp/mathim-desktop.png --window-size=1440,4800 --virtual-time-budget=2000 http://localhost:4173/
-          google-chrome --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --screenshot=/tmp/mathim-mobile.png --window-size=390,6000 --virtual-time-budget=2000 http://localhost:4173/
-          python3 - <<'PY'
-          import base64
-          for label in ('desktop','mobile'):
-              with open(f'/tmp/mathim-{label}.png','rb') as f: data = base64.b64encode(f.read()).decode('ascii')
-              print(f'MATHIM_PREVIEW_{label.upper()}_START')
-              for i in range(0,len(data),160): print(data[i:i+160])
-              print(f'MATHIM_PREVIEW_{label.upper()}_END')
-          PY
+          mkdir -p /tmp/mathim-screens
+          for entry in "overview /" "organization /about/" "divisions /services/" "contact /contact/"; do
+            set -- $entry
+            name=$1
+            route=$2
+            curl --fail --silent --show-error "http://localhost:4173$route" > /dev/null
+            google-chrome --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --screenshot="/tmp/mathim-screens/$name-desktop.png" --window-size=1440,4400 --virtual-time-budget=1800 "http://localhost:4173$route"
+            google-chrome --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --screenshot="/tmp/mathim-screens/$name-mobile.png" --window-size=390,6200 --virtual-time-budget=1800 "http://localhost:4173$route"
+          done
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: mathim-redesign-preview
+          name: mathim-corporate-review
           path: |
             dist/
-            /tmp/mathim-desktop.png
-            /tmp/mathim-mobile.png
+            /tmp/mathim-screens/
+          retention-days: 21
