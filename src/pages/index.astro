@@ -1,20 +1,15 @@
 ---
-// index.astro — landing page, composes all sections
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
-import ServicesOverview from '../components/ServicesOverview.astro';
 import AboutPractice from '../components/AboutPractice.astro';
+import ServicesOverview from '../components/ServicesOverview.astro';
 import ProofSection from '../components/ProofSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 ---
-
-<BaseLayout
-  title="Mathim Divisions"
-  description="IT clarity for small business. Documentation, audits, roadmaps."
->
+<BaseLayout title="Mathim Divisions" description="Mathim Divisions — an independent organization for technical systems, research, publishing, and the unexpected.">
   <Hero />
-  <ServicesOverview />
   <AboutPractice />
+  <ServicesOverview />
   <ProofSection />
   <ContactSection />
 </BaseLayout>

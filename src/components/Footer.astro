@@ -1,11 +1,14 @@
 ---
-// Footer.astro — minimal site footer
 ---
 <footer class="site-footer">
-  <ul class="footer-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="https://acgh213.github.io/vesper-blog/">Blog</a></li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
-  <p>Mathim Divisions &copy; 2026</p>
+  <div class="container">
+    <div class="footer-upper">
+      <div class="footer-brand">Mathim Divisions<small>An independent organization of endeavors</small></div>
+      <div class="footer-nav">
+        <div class="footer-nav-group"><strong>Corporate</strong><a href="/">Overview</a><a href="/about">Profile</a><a href="/services">Divisions</a><a href="/contact">Contact</a></div>
+        <div class="footer-nav-group"><strong>Affiliations</strong><a href="https://thesmolmodel.co" target="_blank" rel="noopener noreferrer">Smol Model Company ↗</a><a href="https://acgh213.github.io/vesper-blog/" target="_blank" rel="noopener noreferrer">Vesper ↗</a></div>
+      </div>
+    </div>
+    <div class="footer-lower"><span>© {new Date().getFullYear()} Mathim Divisions</span><span>New Haven · Connecticut · United States</span><span>Document MD / 001</span></div>
+  </div>
 </footer>

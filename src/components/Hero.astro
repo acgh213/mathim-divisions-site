@@ -1,16 +1,31 @@
 ---
-// Hero.astro — the centerpiece: name, tagline, CTAs
-import Button from './Button.astro';
 ---
-<section class="hero-section">
-  <h1 class="hero-name">
-    Mathim<br />Divisions
-  </h1>
-  <p class="hero-tagline">
-    A clarity practice. IT work, writing, tools,<br />and whatever we build next.
-  </p>
-  <div class="hero-ctas">
-    <Button href="/services">See What We Do</Button>
-    <Button href="/contact" variant="secondary">Get in Touch</Button>
+<section class="report-intro">
+  <div class="container">
+    <div class="report-meta label"><span class="eyebrow">Mathim Divisions / Organization Profile</span><span>Report MD–001 · 2026 Edition</span></div>
+  </div>
+</section>
+<section class="sheet">
+  <div class="container">
+    <div class="cover">
+      <div class="cover-copy">
+        <span class="label cover-ref">Corporate overview / 01</span>
+        <div>
+          <h1 class="cover-title">A structure for <em>everything</em> worth making.</h1>
+          <p class="cover-description">Research, systems, publishing, and independent work. One name for initiatives that refuse to fit a single industry.</p>
+          <a class="cover-action" href="/services">Review operating divisions&nbsp; ↗</a>
+        </div>
+        <div class="cover-foot"><span>Mathim Divisions</span><span>Organization profile · 2026</span></div>
+      </div>
+      <div class="cover-image" role="img" aria-label="Architectural study of intersecting modern office towers">
+        <div class="tower tower-c"></div><div class="tower tower-a"></div><div class="tower tower-b"></div><div class="cover-image-overlay"></div>
+        <div class="image-caption"><span>Figure 01 — Study in structure</span><span>MD / ARCHIVE</span></div>
+      </div>
+    </div>
+    <div class="cover-operations">
+      <div><strong>Organization</strong><span>Independent multidisciplinary practice</span></div>
+      <div><strong>Areas of operation</strong><span>Research · Technical systems · Publishing</span></div>
+      <div><strong>Based in</strong><span>New Haven, Connecticut</span></div>
+    </div>
   </div>
 </section>

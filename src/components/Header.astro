@@ -1,19 +1,41 @@
 ---
-// Header.astro — fixed nav with glass blur on scroll
+const path = Astro.url.pathname;
 ---
 <header class="site-header">
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <span>MATHIM DIVISIONS &nbsp;/&nbsp; INDEPENDENT ORGANIZATION</span>
+      <span class="utility-right">ORGANIZATIONAL PROFILE &nbsp; • &nbsp; 2026</span>
+    </div>
+  </div>
   <div class="header-inner">
-    <a href="/" class="site-title">Mathim Divisions</a>
-    <button class="mobile-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="/services">Services</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
+    <a href="/" class="brand" aria-label="Mathim Divisions home">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span class="brand-name">Mathim<br/>Divisions <small>Research / Systems / Publishing</small></span>
+    </a>
+    <span class="header-strap"><strong>Corporate directory</strong>Independent initiatives<br/>New Haven, Connecticut</span>
+    <button class="mobile-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false">MENU ☰</button>
+  </div>
+  <div class="nav-bar">
+    <nav class="nav-inner" aria-label="Primary navigation">
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="/" aria-current={path === '/' ? 'page' : undefined}>Overview</a></li>
+        <li><a href="/about" aria-current={path === '/about' ? 'page' : undefined}>Corporate profile</a></li>
+        <li><a href="/services" aria-current={path === '/services' ? 'page' : undefined}>Operating divisions</a></li>
+        <li><a href="https://thesmolmodel.co" target="_blank" rel="noopener noreferrer">Research affiliate ↗</a></li>
+        <li><a href="/contact" aria-current={path === '/contact' ? 'page' : undefined}>Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
+<script>
+const toggle = document.querySelector<HTMLButtonElement>('.mobile-toggle');
+const bar = document.querySelector<HTMLElement>('.nav-bar');
+const links = document.querySelectorAll<HTMLAnchorElement>('.nav-links a');
+if(toggle && bar){
+ const close=()=>{bar.classList.remove('nav-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation');toggle.textContent='MENU ☰';};
+ toggle.addEventListener('click',()=>{const open=bar.classList.toggle('nav-open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');toggle.textContent=open?'CLOSE ×':'MENU ☰';});
+ links.forEach(link=>link.addEventListener('click',close));
+ window.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
+}
+</script>

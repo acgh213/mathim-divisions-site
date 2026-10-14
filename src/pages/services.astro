@@ -1,109 +1,52 @@
 ---
-// services.astro — what we do page, multiple lanes
 import BaseLayout from '../layouts/BaseLayout.astro';
-import GlassCard from '../components/GlassCard.astro';
 ---
-
-<BaseLayout
-  title="What We Do"
-  description="IT clarity, writing, tools, and consulting. Mathim Divisions is a practice with multiple lanes — here's what's available now."
->
-  <section class="section" style="padding-top: 160px;">
-    <p class="section-label">What We Do</p>
-    <h1 class="section-heading">Multiple lanes, one practice</h1>
-    <p class="section-subtitle">
-      Mathim Divisions is a personal brand that can hold many kinds of work. These are the active lanes right now. More will open.
-    </p>
-  </section>
-
-  <!-- IT Clarity -->
-  <section class="section" id="it">
-    <div class="section-divider" style="margin-bottom: 4rem;"></div>
-    <p class="section-label">IT Clarity</p>
-    <h2>Audits, documentation &amp; roadmaps</h2>
-    <p>
-      Small businesses that don't have dedicated IT staff still need to know what they have,
-      what's broken, and what to do next. This is the core of the practice — clear, human-readable
-      IT work delivered as documents you can actually use.
-    </p>
-
-    <div class="services-grid" style="margin-top: 2rem;">
-      <GlassCard>
-        <h3 class="service-card-heading">Light Audit</h3>
-        <p class="service-card-text">
-          A focused review of one area — M365 tenant health, device inventory, or backup
-          verification. One report with findings and recommendations.
-        </p>
-        <p style="margin-top: 1rem; font-weight: 500;">Starting at $300</p>
-      </GlassCard>
-
-      <GlassCard>
-        <h3 class="service-card-heading">Full Audit</h3>
-        <p class="service-card-text">
-          Complete environment scan: M365, devices, security, backups, network. Prioritized
-          findings, immediate risks flagged, remediation roadmap.
-        </p>
-        <p style="margin-top: 1rem; font-weight: 500;">Starting at $1,200</p>
-      </GlassCard>
-
-      <GlassCard>
-        <h3 class="service-card-heading">Compliance Readiness</h3>
-        <p class="service-card-text">
-          Audit plus compliance gap analysis against your framework — HIPAA, CMMC, or
-          general security best practices. Documentation ready for review.
-        </p>
-        <p style="margin-top: 1rem; font-weight: 500;">Starting at $2,500</p>
-      </GlassCard>
+<BaseLayout title="Operating Divisions" description="Directory of Mathim Divisions operating groups: research, technical systems, and publications.">
+  <section class="interior-hero">
+    <div class="container">
+      <div class="interior-ref label"><span>Operations register / 02</span><span>MD–DIV / 2026</span></div>
+      <h1>Several disciplines.<br/><em>One organization.</em></h1>
+      <p>Independent work grouped by purpose, not constrained by a single industry.</p>
     </div>
-
-    <p style="margin-top: 2rem;">
-      Also available: <strong>documentation &amp; SOPs</strong> (starting at $300) and
-      <strong>roadmaps &amp; strategy</strong> (starting at $500). Every engagement produces
-      editable documents you keep — not a locked portal.
-    </p>
   </section>
-
-  <!-- Writing -->
-  <section class="section" id="writing">
-    <div class="section-divider" style="margin-bottom: 4rem;"></div>
-    <p class="section-label">Writing</p>
-    <h2>The Vesper Blog</h2>
-    <p>
-      Essays on technology, continuity, and practice — published regularly. Case studies from
-      real engagements, thinking-out-loud about how IT work actually gets done, and explorations
-      of what it means to build a practice around clarity.
-    </p>
-    <p style="margin-top: 1rem;">
-      <a href="https://acgh213.github.io/vesper-blog/">Visit the blog &rarr;</a>
-    </p>
+  <section class="editorial-section" id="research">
+    <div class="container editorial-columns">
+      <div class="editorial-kicker">Division 01 / R&amp;D</div>
+      <div class="editorial-copy">
+        <h2>Research &amp; development.</h2>
+        <p>The Smol Model Company of New Haven is an independent laboratory studying useful model capability under practical constraints of compute, memory, bandwidth, latency, power, data, and cost.</p>
+        <p>Its work centers controlled experiments, reproducible evidence, and careful reporting of limitations. The laboratory has its own research identity and public site.</p>
+        <a class="text-link" href="https://thesmolmodel.co" target="_blank" rel="noopener noreferrer">Visit the Smol Model Company <span class="arrow">↗</span></a>
+      </div>
+    </div>
   </section>
-
-  <!-- Tools & Templates -->
-  <section class="section" id="tools">
-    <div class="section-divider" style="margin-bottom: 4rem;"></div>
-    <p class="section-label">Tools &amp; Templates</p>
-    <h2>Digital products on Gumroad</h2>
-    <p>
-      Ready-to-use IT documentation kits, SOP bundles, audit checklists, and policy templates —
-      built from real engagements and available to download and adapt.
-    </p>
-    <p style="margin-top: 1rem;">
-      The first product — the <strong>Small Business IT Audit Kit</strong> — is available now.
-      <a href="https://mathim.gumroad.com/l/epwnh">Get it on Gumroad &rarr;</a>
-    </p>
+  <section class="editorial-section alt" id="systems">
+    <div class="container editorial-columns">
+      <div class="editorial-kicker">Division 02 / Systems</div>
+      <div class="editorial-copy">
+        <h2>Technical systems &amp; practice.</h2>
+        <p>Technical services and documentation for organizations that need a clearer understanding of their existing environments. The earlier Mathim consulting offerings remain available, within the broader organizational directory rather than defining the entire organization.</p>
+        <div class="service-pricing">
+          <div class="pricing-card"><span class="eyebrow">Service 01</span><h3>Focused audit</h3><p>A targeted review of an environment component and a written report.</p><span class="price">Starting at $300</span></div>
+          <div class="pricing-card"><span class="eyebrow">Service 02</span><h3>Full environment audit</h3><p>Devices, M365, backups, network, and prioritized recommendations.</p><span class="price">Starting at $1,200</span></div>
+          <div class="pricing-card"><span class="eyebrow">Service 03</span><h3>Readiness review</h3><p>Specified framework gap analysis and operational documentation.</p><span class="price">Starting at $2,500</span></div>
+        </div>
+        <p>Documentation, SOPs, and strategy work are scoped separately. Each engagement is evaluated individually.</p>
+        <a class="text-link" href="/contact">Discuss a technical project <span class="arrow">↗</span></a>
+      </div>
+    </div>
   </section>
-
-  <!-- Contact -->
-  <section class="section contact-section">
-    <div class="section-divider" style="margin-bottom: 4rem;"></div>
-    <p class="section-label">Next Step</p>
-    <h2>Let's talk</h2>
-    <p style="margin-bottom: 2rem;">
-      Every engagement starts with a free conversation. No pitch, no pressure —
-      just figuring out if we can help, in whatever lane makes sense.
-    </p>
-    <p>
-      <a href="mailto:cassie@mathimdivisions.com" class="contact-email">cassie@mathimdivisions.com</a>
-    </p>
+  <section class="editorial-section" id="publications">
+    <div class="container editorial-columns">
+      <div class="editorial-kicker">Division 03 / Publishing</div>
+      <div class="editorial-copy">
+        <h2>Publications &amp; independent work.</h2>
+        <p>Research notes, essays, reusable technical resources, and creative work without a fixed category. The work remains accessible; it no longer has to serve as the entire Mathim identity.</p>
+        <div class="index-table">
+          <div class="index-line"><span class="section-index">01</span><div><h3>Vesper</h3><p>Essays on technology, continuity, research, and creative practice.</p></div><a href="https://acgh213.github.io/vesper-blog/" target="_blank" rel="noopener noreferrer">Read ↗</a></div>
+          <div class="index-line"><span class="section-index">02</span><div><h3>Tools & documentation</h3><p>Reusable technical resources and practical reference material.</p></div><a href="https://mathim.gumroad.com/l/epwnh" target="_blank" rel="noopener noreferrer">Explore ↗</a></div>
+        </div>
+      </div>
+    </div>
   </section>
 </BaseLayout>

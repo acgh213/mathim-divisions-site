@@ -1,35 +1,17 @@
 ---
-// ServicesOverview.astro — what the practice does, across all lanes
-import GlassCard from './GlassCard.astro';
+const rows=[
+{code:'01',title:'Research & Development',body:'Independent experiments in useful intelligence, learning systems, and constrained computation.',href:'/services#research'},
+{code:'02',title:'Technical Systems',body:'IT practice, operational documentation, infrastructure research, and tools made for real environments.',href:'/services#systems'},
+{code:'03',title:'Publications & Other Work',body:'Essays, technical publications, creative projects, and a continuing catalogue of independent work.',href:'/services#publications'}
+];
 ---
-<section class="section">
-  <p class="section-label">What We Do</p>
-  <h2 class="section-heading">The practice, in practice</h2>
-  <p class="section-subtitle">Mathim Divisions is a container for the work we do — IT, writing, tools, consulting. These are the lanes. More will open.</p>
-
-  <div class="services-grid">
-    <GlassCard>
-      <h3 class="service-card-heading">IT Clarity</h3>
-      <p class="service-card-text">
-        Audits, documentation, SOPs, roadmaps. For small businesses that need someone to make sense of what they have.
-      </p>
-      <a href="/services#it" class="service-card-link">IT services &rarr;</a>
-    </GlassCard>
-
-    <GlassCard>
-      <h3 class="service-card-heading">Writing &amp; Essays</h3>
-      <p class="service-card-text">
-        The Vesper blog. Case studies, methodology, thinking-out-loud about technology, continuity, and practice.
-      </p>
-      <a href="https://acgh213.github.io/vesper-blog/" class="service-card-link">Read the blog &rarr;</a>
-    </GlassCard>
-
-    <GlassCard>
-      <h3 class="service-card-heading">Tools &amp; Templates</h3>
-      <p class="service-card-text">
-        Ready-to-use IT documentation kits, templates, and resources — built from real work, available on Gumroad.
-      </p>
-      <a href="https://mathim.gumroad.com/l/epwnh" class="service-card-link">Visit the shop &rarr;</a>
-    </GlassCard>
+<section class="divisions-section">
+  <div class="container">
+    <div class="section-heading"><span class="section-index">02</span><h2>Operating divisions</h2></div>
+    <h2 class="report-section-title">Activities across disciplines</h2>
+    <p class="report-lede">The organization maintains a deliberately broad remit. Each division exists to house meaningful work—not to place a limit on it.</p>
+    <div class="division-table">
+      {rows.map(row => <a class="division-row" href={row.href}><span class="division-code">{row.code}</span><h3 class="division-name">{row.title}</h3><p class="division-description">{row.body}</p><span class="division-action" aria-hidden="true">DETAILS ↗</span></a>)}
+    </div>
   </div>
 </section>
