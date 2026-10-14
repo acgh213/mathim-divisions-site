@@ -1,0 +1,32 @@
+{
+  "name": "mathim-divisions-site",
+  "main": "./worker.js",
+  "compatibility_date": "2026-05-10",
+  "compatibility_flags": [
+    "global_fetch_strictly_public"
+  ],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "849087820d3745b499ad89c546c65c54"
+    }
+  ],
+  "images": {
+    "binding": "IMAGES"
+  },
+  "routes": [
+    {
+      "pattern": "mathimdivisions.com",
+      "custom_domain": true
+    }
+  ],
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": {
+    "enabled": true
+  }
+}
