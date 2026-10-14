@@ -1,55 +1,28 @@
 ---
-// BaseLayout.astro — root layout for all pages
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
-export interface Props {
-  title: string;
-  description?: string;
-}
-const { title, description } = Astro.props;
+export interface Props { title: string; description?: string; }
+const { title, description = 'Mathim Divisions — an independent organization for research, systems, publishing, and whatever comes next.' } = Astro.props;
+const pageTitle = title === 'Mathim Divisions' ? title : title + ' — Mathim Divisions';
 ---
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} — Mathim Divisions</title>
-    <meta name="description" content={description || 'Mathim Divisions — a clarity practice. IT work, writing, tools, and whatever we build next.'} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content={`${title} — Mathim Divisions`} />
-    <meta property="og:description" content={description || 'A clarity practice by Cassie. IT, writing, tools.'} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1112" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
+    <a class="sr-only" href="#main-content">Skip to content</a>
     <Header />
-    <main>
-      <slot />
-    </main>
+    <main id="main-content"><slot /></main>
     <Footer />
   </body>
 </html>
-
-<script>
-  // Scroll detection for glass header
-  const header = document.querySelector('.site-header');
-  if (header) {
-    const onScroll = () => {
-      header.classList.toggle('scrolled', window.scrollY > 20);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
-
-  // Mobile nav toggle
-  const toggle = document.querySelector('.mobile-toggle');
-  const nav = document.querySelector('.nav-links');
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
-  }
-</script>

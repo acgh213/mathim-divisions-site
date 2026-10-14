@@ -1,35 +1,26 @@
 ---
-// ServicesOverview.astro — what the practice does, across all lanes
-import GlassCard from './GlassCard.astro';
+const divisions = [
+  { n:'01', title:'Research & Development', description:'Independent experiments in useful intelligence, learning systems, and constrained computation.', href:'/services#research' },
+  { n:'02', title:'Systems & Practice', description:'Technical operations, documentation, automation, and the craft of making complex systems understandable.', href:'/services#systems' },
+  { n:'03', title:'Publications & Work', description:'Writing, tools, creative work, and projects that do not belong to a single discipline.', href:'/services#publications' },
+];
 ---
-<section class="section">
-  <p class="section-label">What We Do</p>
-  <h2 class="section-heading">The practice, in practice</h2>
-  <p class="section-subtitle">Mathim Divisions is a container for the work we do — IT, writing, tools, consulting. These are the lanes. More will open.</p>
-
-  <div class="services-grid">
-    <GlassCard>
-      <h3 class="service-card-heading">IT Clarity</h3>
-      <p class="service-card-text">
-        Audits, documentation, SOPs, roadmaps. For small businesses that need someone to make sense of what they have.
-      </p>
-      <a href="/services#it" class="service-card-link">IT services &rarr;</a>
-    </GlassCard>
-
-    <GlassCard>
-      <h3 class="service-card-heading">Writing &amp; Essays</h3>
-      <p class="service-card-text">
-        The Vesper blog. Case studies, methodology, thinking-out-loud about technology, continuity, and practice.
-      </p>
-      <a href="https://acgh213.github.io/vesper-blog/" class="service-card-link">Read the blog &rarr;</a>
-    </GlassCard>
-
-    <GlassCard>
-      <h3 class="service-card-heading">Tools &amp; Templates</h3>
-      <p class="service-card-text">
-        Ready-to-use IT documentation kits, templates, and resources — built from real work, available on Gumroad.
-      </p>
-      <a href="https://mathim.gumroad.com/l/epwnh" class="service-card-link">Visit the shop &rarr;</a>
-    </GlassCard>
+<section class="divisions-section" id="divisions">
+  <div class="container">
+    <div class="section-topline"><span class="eyebrow">Organizational directory</span><span class="index">MD / 002</span></div>
+    <div class="divisions-heading">
+      <h2>Areas of<br />operation.</h2>
+      <p>Multiple lines of work. One name. Each initiative is free to be exactly what it needs to be.</p>
+    </div>
+    <div class="division-list">
+      {divisions.map(d => (
+        <a class="division-row" href={d.href}>
+          <span class="division-num mono">{d.n} /</span>
+          <h3 class="division-name">{d.title}</h3>
+          <p class="division-description">{d.description}</p>
+          <span class="division-arrow" aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
   </div>
 </section>

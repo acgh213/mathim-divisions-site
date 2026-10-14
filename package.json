@@ -1,14 +1,13 @@
 {
   "name": "mathim-divisions-site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "astro": "^6.3.1"
   }

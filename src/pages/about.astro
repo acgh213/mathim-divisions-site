@@ -1,65 +1,51 @@
 ---
-// about.astro — full about page — the practice, the person, the name
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
-<BaseLayout
-  title="About"
-  description="Mathim Divisions is Cassie's clarity practice — IT work, writing, tools, and whatever comes next."
->
-  <section class="section" style="padding-top: 160px;">
-    <p class="section-label">About</p>
-    <h1 class="section-heading">Hi, I'm Cassie</h1>
-    <p class="section-subtitle">
-      Mathim Divisions is my practice. It's the name I put on my work — whatever shape that work takes.
-    </p>
+<BaseLayout title="The Organization" description="Mathim Divisions began as an imaginary organization for everything. The name endured; the work became real.">
+  <section class="interior-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="signal"></span>About / The organization</p>
+      <h1>A name for<br /><em>what comes next.</em></h1>
+      <p>There was never any requirement that the work belong to one field. The name came first. The disciplines followed.</p>
+    </div>
   </section>
 
-  <section class="section">
-    <h2>The Practice</h2>
-    <p>
-      I'm an IT technician, a writer, and someone who builds things. Mathim Divisions is
-      the container for all of it. Right now, that means IT audits, documentation, and roadmaps
-      for small businesses — plus a blog about technology and practice, plus digital products
-      on Gumroad. Tomorrow it might be something else. The container doesn't limit the work;
-      it just gives it a name.
-    </p>
-    <p>
-      I believe small businesses deserve the same clarity as enterprises, without the enterprise
-      overhead. Most IT documentation is written for other IT people. Mine is written for the
-      people who run the business — the office manager, the operations director, the person who
-      just needs to know where the passwords are and whether the backups ran.
-    </p>
+  <section class="editorial-section">
+    <div class="container editorial-columns">
+      <p class="editorial-kicker">01 / Mandate</p>
+      <div class="editorial-copy">
+        <h2>Built to contain<br />the unexpected.</h2>
+        <p>Mathim Divisions is an independent umbrella for technical projects, creative endeavors, writing, and research. It gives unlike things a shared home without insisting that they become alike.</p>
+        <p>Some work is practical and immediate: understanding systems, making documentation, and building tools. Some is exploratory: experiments in intelligence and computation, essays, and ideas that may not yet have a category.</p>
+        <p>The divisions are descriptions of work, not borders around it.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="section">
-    <h2>How I Work</h2>
-    <p>
-      I work solo, supported by good tools and a continuity-aware agent system that helps me
-      produce at a level usually associated with larger firms. The output is always human —
-      clear, specific, and written for the people who will actually use it.
-    </p>
-    <p>
-      Every engagement starts with listening. I don't sell software, I don't push products,
-      and I don't recommend solutions until I understand the problem. The deliverable is always
-      a document you can hand to anyone — your next IT hire, your compliance auditor, or yourself
-      six months from now when you need to remember how something works.
-    </p>
+  <section class="editorial-section alt">
+    <div class="container editorial-columns">
+      <p class="editorial-kicker">02 / Provenance</p>
+      <div class="editorial-copy">
+        <h2>The name<br />predates the work.</h2>
+        <p>Long before it appeared on a real website, Mathim Divisions was a fictional company invented by two friends, Cassie and Cameron. It could make a product, operate a business, or be the organization behind whatever they imagined next.</p>
+        <p>Years later, with Cameron's blessing, Cassie kept the name. The concept has changed surprisingly little: an open-ended place for things worth making.</p>
+        <p class="note">An organization of organizations, at least in spirit. No fictional headcount, financial results, or clients required.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="section">
-    <h2>The Name</h2>
-    <p>
-      "Mathim" comes from childhood — a nonsense word that a friend and I invented as a pretend
-      company name. Years later, I asked permission to keep it. He said yes.
-    </p>
-    <p>
-      "Divisions" is about clarity through separation. Taking something tangled and dividing it
-      into coherent parts — whether that's an IT environment, a complex idea, or a project that
-      needs structure. It's the act of making something complex into something you can see.
-    </p>
-    <p>
-      It's not "Solutions." It's not "Systems." It's divisions. The work of clarity.
-    </p>
+  <section class="editorial-section">
+    <div class="container editorial-columns">
+      <p class="editorial-kicker">03 / Present operations</p>
+      <div class="editorial-copy">
+        <h2>Small by choice.<br />Wide by nature.</h2>
+        <p>Current work spans independent AI research, technical practice, writing, and digital tools. The Smol Model Company of New Haven is an affiliated research initiative focused on useful intelligence under real-world constraints.</p>
+        <div class="index-table">
+          <div class="index-line"><span class="index">01</span><div><h3>The Smol Model Company</h3><p>Independent experimental AI research.</p></div><a href="https://thesmolmodel.co" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+          <div class="index-line"><span class="index">02</span><div><h3>Technical practice</h3><p>Systems, documentation, and tools.</p></div><a href="/services#systems">Explore ↗</a></div>
+          <div class="index-line"><span class="index">03</span><div><h3>Writing & creative work</h3><p>Publications, experiments, and a home for what comes next.</p></div><a href="/services#publications">Explore ↗</a></div>
+        </div>
+      </div>
+    </div>
   </section>
 </BaseLayout>
