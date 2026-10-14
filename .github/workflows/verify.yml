@@ -26,8 +26,8 @@ jobs:
         run: |
           python3 -m http.server 4173 --directory dist > /tmp/mathim-http.log 2>&1 &
           sleep 2
-          google-chrome --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --screenshot=/tmp/mathim-desktop.png --window-size=1440,1000 --virtual-time-budget=2000 http://localhost:4173/
-          google-chrome --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --screenshot=/tmp/mathim-mobile.png --window-size=390,844 --virtual-time-budget=2000 http://localhost:4173/
+          google-chrome --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --screenshot=/tmp/mathim-desktop.png --window-size=1440,4800 --virtual-time-budget=2000 http://localhost:4173/
+          google-chrome --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --screenshot=/tmp/mathim-mobile.png --window-size=390,6000 --virtual-time-budget=2000 http://localhost:4173/
           python3 - <<'PY'
           import base64
           for label in ('desktop','mobile'):
